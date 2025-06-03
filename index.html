@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Login form</title>
+    <title>title</title>
   </head>
   <body>
     <div class="container">
       <h3>🌸Welcome</h3>
       <p>Please Login</p>
       <form>
-        <label for="usernameInput">Username:</label
-        ><input type="text" id="usernameInput" /> <br />
-        <label for="passwordInput">Password:</label
-        ><input type="password" id="passwordInput" />
-        <p id="message"></p>
+        <label for="usernameInput">Username:</label>
+        <input type="text" id="usernameInput" name="username" />
+
+        <br />
+
+        <label for="passwordInput">Password:</label>
+        <input type="password" id="passwordInput" name="password" />
+
+        <p id="message">Hello</p>
         <br />
         <br />
-        <button>
-          <a href="#" onclick="verifyUser()">Log in</a>
-        </button>
+
+        <button type="button" onclick="verifyUser()">Log in</button>
       </form>
     </div>
     <script>
       function verifyUser() {
-        let usernameInput = document.getElementById("usernameInput").value;
-        let passwordInput = document.getElementById("passwordInput").value;
+        let username = document.getElementById("usernameInput").value;
+        let password = document.getElementById("passwordInput").value;
+
         checkUserCreds(username, password);
       }
 
       function checkUserCreds(username, password) {
         let systemUsername = "Bond";
         let systemPassword = "007";
-        if (username == systemUsername && password == systemPassword) {
+
+        if (username === systemUsername && password === systemPassword) {
           document.getElementById("message").innerHTML =
-            "Correct. Loggin you in…";
+            "Correct. Logging you in…";
         } else {
           document.getElementById("message").innerHTML =
-            "Sorry. incorrect username or password";
+            "Sorry, incorrect username or password";
         }
       }
     </script>
