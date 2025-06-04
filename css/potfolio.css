@@ -1,0 +1,38 @@
+body {
+  background-image: url("/image/moonsos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box {
+  text-align: center;
+  padding: 180px;
+}
+label,
+p {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+}
+#weather {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
+  background-color: rgb(218, 11, 236);
+}
+p {
+  font-size: 20px;
+}
+button {
+  width: 54px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+  background-color: rgb(218, 11, 236);
+}
+button:hover {
+  background-color: green;
+}
